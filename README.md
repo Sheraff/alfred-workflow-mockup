@@ -2,10 +2,8 @@ alfred-workflow-mockup
 ======================
 
 Template webpage to demo your amazing workflows. 
-- [live demo](http://sheraff.github.io/alfred-workflow-mockup/)
-- [summary](#summary)
-- [how to script](#scripting)
-- [play the script](#playing)
+
+[> live demo](http://sheraff.github.io/alfred-workflow-mockup/)
 
 ## summary <a id="summary"></a>
 Through a very straightforward script (see json script in `script_example.js`), this framework allows you to demo how your workflows work thanks to an **Alfred mockup**, a simple **OSX notifications** system and a **key modifiers** display.
