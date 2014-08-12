@@ -6,9 +6,14 @@ p{
 	display: none;
 }
 
+body, html, *{
+	margin: 0;
+	padding: 0;
+}
+
 #mac {
 	position: relative;
-	margin: auto;
+	margin: 10px auto;
 
 	width: 800px;
 	height: 500px;
