@@ -58,6 +58,12 @@ The script is a simple array of states, each described by a json string. All ele
 }
 ```
 
+- `callback`: function to be called when this state is displayed (only when reading the script with `play_script()`, ignored when using `echo_state()`). Send the index of the state as an argument.
+```
+// Example
+"callback": my_function
+```
+
 ## how to play the script
 There are 2 functions that allow you to use what you scripted:
 - `echo_state(state)` put the simulation in the provided state. If some notification / key modifiers were on the screen, they will fade away normally unless replaced by the provided state.
