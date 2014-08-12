@@ -19,7 +19,7 @@ The script is a simple array of states, each described by a json string. All ele
 - `keypress`: emits a *pressed key* display of the specified string (similar to the *volume up* or *volume down* notifications on OSX) at the beginning of the state. The display fades out in 1 second.
 ```
 // Example
-`"keypress": “⇥”`
+"keypress": "⇥"
 ```
 
 - `notification`: emits an *osx notification* (similar to all the notifications you can see on the top right corner of your screen under OSX) at the beginning of the state. The notification enters, stills, and pans out in 4 seconds. Sub-elements are:
@@ -56,4 +56,24 @@ The script is a simple array of states, each described by a json string. All ele
 		"icon": "imgs/icon.png"
 	}]
 }
+```
+
+## how to play the script
+There are 2 functions that allow you to use what you scripted:
+- `echo_state(state)` put the simulation in the provided state. If some notification / key modifiers were on the screen, they will fade away normally unless replaced by the provided state.
+```
+// Example
+echo_state(script[0]) //to put in initial position
+```
+- `play_script(script, from, to, loop, start_at)` will take care of playing the whole script based on the given parameters:
+  - `script` is the script you want to follow
+  - `from` (defaults to `0`) is the first state to be displayed, 
+  - `to` (defaults to `0`) is the last+1 (use `0` or `script.length` to play the whole script)
+  - `loop` (defaults to `true`) is a boolean to indicate whether or not to go back to (`from`) when `to` is reached
+  - `start_at` (defaults to the value of `from`) is where the playhead starts at
+```
+// Examples
+play_script(script) //play and loop the whole script
+play_script(script, 3) //play and loop the whole script except frames 0, 1 and 2
+play_script(script, 2, 5, false) //play frames 2, 3, 4 and stop 
 ```
