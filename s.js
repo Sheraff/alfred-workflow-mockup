@@ -465,15 +465,28 @@ function echo_state (state) {
 		keypress.innerHTML = state.keypress;
 		alfred.parentNode.appendChild(keypress);
 	}
+
 }
 
-function play_script(i){
-	echo_state(script[i]);
-	console.log(i);
+function play_script(script, from, to, loop, current){
+	if(typeof from === "undefined") from = 0;
+	if(typeof to === "undefined") to = 0;
+	if(typeof loop === "undefined") loop = true;
+	if(typeof current === "undefined") current = from;
+
+	echo_state(script[current]);
+	if (script[current].callback && typeof(script[current].callback) === "function") {
+		script[current].callback(current);
+	}
+
 	setTimeout(function () {
-		play_script((script.length==i+1?0:i+1));
-	}, script[i].duration);
+		var temp_to = (to==0)?script.length:Math.min(script.length,to);
+		if(current>=temp_to-1 && loop)
+			play_script(script, from, to, loop, from);
+		else if(current<temp_to-1)
+			play_script(script, from, to, loop, current+1);
+	}, script[current].duration);
 }
 
 var alfred = document.getElementById('alfred');
-play_script(0);
+play_script(script);

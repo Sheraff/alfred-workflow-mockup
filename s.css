@@ -80,6 +80,7 @@ p{
 	box-shadow: 0 0 3px 1px #777;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	-webkit-transform-origin: 50% 0;
+	-webkit-perspective: 200px;
 	-webkit-animation: notify 4s linear forwards;
 }
 @-webkit-keyframes notify {
