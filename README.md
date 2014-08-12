@@ -9,6 +9,7 @@ Template webpage to demo your amazing workflows.
 Through a very straightforward script (see json script in `script_example.js`), this framework allows you to demo how your workflows work thanks to an **Alfred mockup**, a simple **OSX notifications** system and a **key modifiers** display.
 
 ![Screen shot of mockup](screen_shot.gif)
+If you are interested in the piratebay workflow shown in this gif, follow [this link...](https://github.com/Sheraff/piratebay-alfred-workflow)
 
 ## how to script <a id="scripting"></a>
 The script is a simple array of states, each described by a json string. All elements are optional and have a default state (either hidden of placeholders). Here’s a list of possible elements:
