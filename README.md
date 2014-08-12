@@ -1,14 +1,18 @@
 alfred-workflow-mockup
 ======================
 
-Template webpage to demo your amazing workflows. [> See demo here](http://sheraff.github.io/alfred-workflow-mockup/)
+Template webpage to demo your amazing workflows. 
+- [live demo](http://sheraff.github.io/alfred-workflow-mockup/)
+- [summary](#summary)
+- [how to script](#scripting)
+- [play the script](#playing)
 
-## summary
+## summary <a id="summary"></a>
 Through a very straightforward script (see json script in `script_example.js`), this framework allows you to demo how your workflows work thanks to an **Alfred mockup**, a simple **OSX notifications** system and a **key modifiers** display.
 
 ![Screen shot of mockup](screen_shot.gif)
 
-## how to script
+## how to script <a id="scripting"></a>
 The script is a simple array of states, each described by a json string. All elements are optional and have a default state (either hidden of placeholders). Here’s a list of possible elements:
 - `duration`: duration of the state in milliseconds.
 ```
@@ -64,7 +68,7 @@ The script is a simple array of states, each described by a json string. All ele
 "callback": my_function
 ```
 
-## how to play the script
+## how to play the script <a id="playing"></a>
 There are 2 functions that allow you to use what you scripted:
 - `echo_state(state)` put the simulation in the provided state. If some notification / key modifiers were on the screen, they will fade away normally unless replaced by the provided state.
 ```
