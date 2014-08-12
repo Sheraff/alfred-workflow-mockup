@@ -8,7 +8,7 @@ Through a very straightforward script (see json script in `script_example.js`), 
 
 [> See demo here](http://sheraff.github.io/alfred-workflow-mockup/)
 
-![Screen shot of mockup](screen_shot.png)
+![Screen shot of mockup](screen_shot.gif)
 
 ## how to script
 The script is a simple array of states, each described by a json string. All elements are optional and have a default state (either hidden of placeholders). Here’s a list of possible elements:
