@@ -1,12 +1,10 @@
 alfred-workflow-mockup
 ======================
 
-Template webpage to demo your amazing workflows.
+Template webpage to demo your amazing workflows. [> See demo here](http://sheraff.github.io/alfred-workflow-mockup/)
 
 ## summary
 Through a very straightforward script (see json script in `script_example.js`), this framework allows you to demo how your workflows work thanks to an **Alfred mockup**, a simple **OSX notifications** system and a **key modifiers** display.
-
-[> See demo here](http://sheraff.github.io/alfred-workflow-mockup/)
 
 ![Screen shot of mockup](screen_shot.gif)
 
@@ -25,8 +23,8 @@ The script is a simple array of states, each described by a json string. All ele
 ```
 
 - `notification`: emits an *osx notification* (similar to all the notifications you can see on the top right corner of your screen under OSX) at the beginning of the state. The notification enters, stills, and pans out in 4 seconds. Sub-elements are:
--- `title`: the main text of the notification
--- `sub`: the secondary text, written smaller and in grey.
+  - `title`: the main text of the notification
+  - `sub`: the secondary text, written smaller and in grey.
 ```
 // Example
 "notification": {
@@ -36,13 +34,13 @@ The script is a simple array of states, each described by a json string. All ele
 ```
 
 - `alfred`: describes the composition of the alfred mockup. Remove to hide Alfred. Sub-elements are:
--- `title`: the query typed in alfred
--- `icon`: main icon of the current workflow (this is similar to when alfred is called with a hotkey). Leave empty to default to Alfred’s icon.
--- `list`: an array of json strings to describe the results shown in alfred. Each element is composed of:
---- `title`: Main text of the result
---- `sub`: Secondary text of the result
---- `icon`: small icon for the result, leave empty to default to the main icon defined before.
---- `selected`: boolean to indicate the selected result. If no result is described as selected, the first result is selected.
+  - `title`: the query typed in alfred
+  - `icon`: main icon of the current workflow (this is similar to when alfred is called with a hotkey). Leave empty to default to Alfred’s icon.
+  - `list`: an array of json strings to describe the results shown in alfred. Each element is composed of:
+    - `title`: Main text of the result
+    - `sub`: Secondary text of the result
+    - `icon`: small icon for the result, leave empty to default to the main icon defined before.
+    - `selected`: boolean to indicate the selected result. If no result is described as selected, the first result is selected.
 ```
 // Example
 "alfred": {
